@@ -1,32 +1,41 @@
-<!doctype html> 
+
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport"
-      content="width=device-width, initial-scale=1">
-    <title>はじめてのAR</title>
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/AR-js-
-org/AR.js@3.4.7/aframe/build/aframe-ar.js"></script>
-    <style>
-      body { margin: 0; overflow: hidden; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AR復旧テスト</title>
+
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.7/aframe/build/aframe-ar.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
 </head>
+
 <body>
-    <a-scene embedded
-      arjs="sourceType: webcam; debugUIEnabled: false;"
-      vr-mode-ui="enabled: false">
-　<a-marker type="pattern" url="pattern-スクリーンショット 2026-11-11 120102.patt">
-  　<a-entity
-    　id="fox"
-    　gltf-model="url(Fox.glb)"
-    　position="0 0 0"
-    　rotation="0 45 0"
-    　scale="0.008 0.008 0.008"
-    　animation-mixer="clip: Walk; loop: repeat">
-  　</a-entity>
-　</a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+  <a-scene
+    embedded
+    arjs="sourceType: webcam; debugUIEnabled: false;"
+    vr-mode-ui="enabled: false">
+
+    <a-marker
+      type="pattern"
+      url="pattern-スクリーンショット 2026-11-11 120102.patt">
+
+      <a-box
+        position="0 0.5 0"
+        material="color: cyan;">
+      </a-box>
+
+    </a-marker>
+
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
 </html>
+
